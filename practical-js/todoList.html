@@ -9,11 +9,20 @@
     <script>
       var todos = ["Item 1", "Item 2", "Item 3"];
 
-      console.log(todos);
+      function remove(index, deleteCount) {
+        todos.splice(index, deleteCount);
+        console.log(todos);
+      }
 
-      todos.push("Item 4");
-      todos[0] = "Item 1 updated";
-      todos.splice(0, 1);
+      function edit(index, string) {
+        todos[index] = string;
+        console.log(todos);
+      }
+
+      function add(string) {
+        todos.push(string);
+        console.log(todos);
+      }
     </script>
   </body>
 </html>
