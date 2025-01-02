@@ -18,8 +18,8 @@ function secondGreatestNum(arr) {
 }
 
 function arrRandomNumGen(numbersWanted) {
-  let min = -100;
-  let max = 0;
+  let min = -100000000;
+  let max = 100000000;
 
   return Array(numbersWanted)
     .fill()
@@ -70,4 +70,4 @@ function testFunction(iterations) {
   return correctAnswersCount === iterations - 2;
 }
 
-console.log(testFunction(100));
+console.log(testFunction(100000));
