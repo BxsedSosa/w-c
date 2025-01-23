@@ -3,6 +3,8 @@ const app = express();
 const port = 8000;
 
 // Start the app.
+//
+// Listening for port 8000
 app.listen(port, function () {
   console.log("App listening on port: " + port);
 });
@@ -14,6 +16,8 @@ app.use(function logRequest(request, response, next) {
 });
 
 // Normalize urls.
+//
+// If url doesn't end with "/", add it to the end
 app.use(function normalizeUrl(request, response, next) {
   if (request.url[request.url.length - 1] !== "/") {
     request.url = request.url + "/";
